@@ -1,0 +1,73 @@
+/* this flexes each form fieldset  */
+body {
+    font-family: Montreal-Serial-Bold;
+    color: #36382E;
+    background-color: #EDE6E3;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    align-self: center;
+    color: #F37021;
+    width: fit-content;
+    background-color: #EDE6E3;
+    padding: .4em;
+}
+
+form {
+    align-self: center;
+    width: 600px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border: none;
+}
+
+/* flex basis 100% puts each element in a new column stacked on top of eachother  */
+label {
+    flex-basis: 100%;
+    padding-bottom: .4em;
+    padding-top: .75em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: Roboto-Light;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+    border: none;
+}
+
+button {
+    padding: .5em;
+    font-weight: 700;
+    border: 2px solid #36382E;
+}
+
+button:hover,
+button:focus {
+    background: #DADAD9;
+    color: #F37021;
+    border: 2px solid #F37021;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
