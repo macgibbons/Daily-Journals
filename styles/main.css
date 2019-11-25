@@ -71,3 +71,26 @@ button:focus {
 button:active {
     transform: scale(0.99);
 }
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border: none;
+    padding-top: 25px;
+    align-self: center;
+}
+.journalEntry {
+        align-self: center;
+        width: 600px;
+        border: 1px solid #F37021;
+        padding: 1em;
+        margin-bottom: 2em;
+        background-color: white;
+        
+        
+}
+
+div {
+    padding: 5px;
+}
