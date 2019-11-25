@@ -1,21 +1,35 @@
 /* this flexes each form fieldset  */
 body {
-    font-family: Montreal-Serial-Bold;
+    font-family: AvenirNext-Medium;
     color: #36382E;
-    background-color: #EDE6E3;
+    background-color: white;
     display: flex;
     flex-direction: column;
 }
 
 h1 {
+    color: #Fff;
     align-self: center;
-    color: #F37021;
+    /* color: rgb(51, 36, 255); */
     width: fit-content;
-    background-color: #EDE6E3;
     padding: .4em;
+    text-transform: lowercase;
 }
 
+nav {
+    background-color: rgb(51, 36, 255);
+    align-self: center;
+    width: 626px;
+    margin-right: -30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+
+}
 form {
+    color: rgb(51, 36, 255);
+    text-transform: lowercase;
     align-self: center;
     width: 600px;
 }
@@ -24,7 +38,8 @@ fieldset {
     display: flex;
     flex-direction: column;
     width: 600px;
-    border: none;
+    border: 1px solid rgb(51, 36, 255);
+    margin-bottom: 10px;
 }
 
 /* flex basis 100% puts each element in a new column stacked on top of eachother  */
@@ -39,7 +54,8 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: Roboto-Light;
+    font-family: AvenirNext-Medium;
+    border: 1px solid rgb(51, 36, 255);
     /* 1 */
     font-size: 100%;
     /* 1 */
@@ -47,20 +63,24 @@ textarea {
     /* 1 */
     margin: 0;
     /* 2 */
-    border: none;
 }
 
+
 button {
-    padding: .5em;
+    font-size: 10pt;
+    color:white;
+    background-color: rgb(51, 36, 255);
+    border-radius: 25px;
+    padding: 1em 5em;
+    margin-top: 10px;
     font-weight: 700;
-    border: 2px solid #36382E;
 }
 
 button:hover,
 button:focus {
-    background: #DADAD9;
-    color: #F37021;
-    border: 2px solid #F37021;
+color:rgb(51, 36, 255);
+    background-color: #Fff;
+    border: 2px solid rgb(51, 36, 255);
 }
 
 button:focus {
@@ -70,6 +90,10 @@ button:focus {
 
 button:active {
     transform: scale(0.99);
+}
+
+.button {
+    border: none;
 }
 
 article {
@@ -82,11 +106,13 @@ article {
 }
 .journalEntry {
         align-self: center;
-        width: 600px;
-        border: 1px solid #F37021;
+        width: 595px;
+        border: 1px solid rgb(51, 36, 255);
         padding: 1em;
         margin-bottom: 2em;
         background-color: white;
+        color: #36382E;
+        margin-right: auto;
         
         
 }

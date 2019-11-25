@@ -10,8 +10,11 @@
 </head>
 
 <body>
-    <h1>Journal Entry</h1>
+    <nav>
+        <h1>Journal Entry</h1>
+    </nav>
     <form action="">
+        
         <fieldset>
             <label for="journalDate">Date of Journal</label>
             <input type="date" name="journalDate" id="journalDate">
@@ -32,14 +35,17 @@
                 <option value="sad">Sad</option>
             </select>
         </fieldset>
-        <fieldset>
-            <button type="submit" form="" value="Submit">Record Journal Entry</button>
+        <fieldset class="button">
+            <button type="submit" form="" value="Submit">enter</button>
         </fieldset>
 
     </form>
     
     <article id="entryLog">
+    <nav>
+
         <h1>Entries</h1>
+    </nav>
     </article>
     <script type="module" src="./scripts/main.js"></script>
 </body>
