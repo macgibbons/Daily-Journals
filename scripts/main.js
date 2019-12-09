@@ -1,6 +1,10 @@
-import { useJournalEntries } from "./JournalDataProvider.js";
+import { getEntries, useEntries } from "./JournalDataProvider.js";
 import EntryListComponent from "./JounrnalEntryList.js";
 
-console.log(useJournalEntries())
+// console.log(useJournalEntries())
 
-EntryListComponent()
+getEntries().then( 
+    EntryListComponent
+)
+
+
