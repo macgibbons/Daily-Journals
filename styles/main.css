@@ -9,30 +9,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 200px;
+    margin-left: 275px;
 
 }
 
 h1 {
     color: #Fff;
     align-self: center;
-    /* color: rgb(51, 36, 255); */
+    color: rgb(51, 36, 255);
     width: fit-content;
     padding: .4em;
     text-transform: lowercase;
 }
 
 header {
-    background-color: rgb(51, 36, 255);
     align-self: center;
-    width: 110%;
     display: flex;
     justify-content: center;
     /* margin-bot
     tom: 10px; */
-    margin: -30px -10px 10px -10px;
-
-
 }
 form {
     color: rgb(51, 36, 255);

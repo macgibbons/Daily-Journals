@@ -10,48 +10,50 @@
 </head>
 
 <body>
-    <header>
-        <h1>Journal Entry</h1>
-    </header>
-    <article class="content">
-
-        <form action="">
-            
-            <fieldset>
-                <label for="journalDate">Date of Journal</label>
-                <input type="date" name="journalDate" id="journalDate">
-            </fieldset>
-            <fieldset>
-                <label for="journalDate">Concepts Covered</label>
-                <input type="text" name="concepts" id="concepts">
-            </fieldset>
-            <fieldset>
-                <label for="journalEntry">Journal Entry</label>
-                <textarea rows="10" cols="68"></textarea>
-            </fieldset>
-            <fieldset>
-                <label for="Mood">Mood</label>
-                <select name="mood" id="mood">
-                    <option value="happy">Happy</option>
-                    <option value="neutral">Neutral</option>
-                    <option value="sad">Sad</option>
-                </select>
-            </fieldset>
-            <fieldset class="button">
-                <button type="submit" form="" value="Submit">enter</button>
-            </fieldset>
-            
-        </form>
+    <main class="container">
         
-        <article id="entryLog">
-            <nav>
+        <header>
+            <h1>Journal Entry</h1>
+        </header>
+        <article class="content">
+            
+            <form action="">
                 
-                <h1>Entries</h1>
-
-            </nav>
-            <article class="container"></article>
+                <fieldset>
+                    <label for="journalDate">Date of Journal</label>
+                    <input type="date" name="journalDate" id="journalDate">
+                </fieldset>
+                <fieldset>
+                    <label for="journalDate">Concepts Covered</label>
+                    <input type="text" name="concepts" id="concepts">
+                </fieldset>
+                <fieldset>
+                    <label for="journalEntry">Journal Entry</label>
+                    <textarea id="entry__content" rows="10" cols="68"></textarea>
+                </fieldset>
+                <fieldset>
+                    <label for="Mood">Mood</label>
+                    <select name="mood" id="mood">
+                        <option value="happy">Happy</option>
+                        <option value="neutral">Neutral</option>
+                        <option value="sad">Sad</option>
+                    </select>
+                </fieldset>
+                <fieldset class="button">
+                    <button id="save__entry" type="submit" form="" value="Submit">enter</button>
+                </fieldset>
+                
+            </form>
+            
+            <article id="entryLog">
+                <nav>
+                    <h1>Entries</h1>
+                </nav>
+                <article class="container"></article>
+            </article>
         </article>
-    </article>
+    </main>
         <script type="module" src="./scripts/main.js"></script>
-</body>
+    </body>
+
 </html>
