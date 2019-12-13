@@ -34,20 +34,6 @@
       "entry": "today we covered api fetch calls. ",
       "mood": "happy",
       "id": 5
-    },
-    {
-      "date": "2019-12-11",
-      "concept": "test",
-      "entry": "this is a test",
-      "mood": "sad",
-      "id": 6
-    },
-    {
-      "date": "2019-12-02",
-      "concept": "test 2",
-      "entry": "this is a second test",
-      "mood": "happy",
-      "id": 7
     }
   ]
 }
