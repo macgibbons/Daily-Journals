@@ -7,8 +7,25 @@ const entryLog = document.querySelector("#entryLog")
 
 const EntryListComponent = () => {
 
-    const entries = useEntries()
-    eventHub.addEventListener("click", clickEvent => {
+    eventHub.addEventListener("entryHasBeenEdited", event => {
+        renderEntriesAgain()
+     })
+ 
+     const entries = useEntries()
+     eventHub.addEventListener("click", clickEvent => {
+                 if (clickEvent.target.id.startsWith("editEntry--")) {
+                    console.log("edit button clicked");
+
+                     const [deletePrefix, entryId] = clickEvent.target.id.split("--")
+         
+                     const editEvent = new CustomEvent("editButtonClicked", {
+                         detail: {
+                             entryId: entryId
+                         }
+                     })
+         
+                     eventHub.dispatchEvent(editEvent)
+                 }
         // if the id of the button starts with "deleteNote--" then it performs the next function
         if (clickEvent.target.id.startsWith("deleteEntry--")) {
             
