@@ -1,13 +1,6 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "07/24/2025",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Ok"
-    },
-    {
       "id": 2,
       "date": "11/22/2019",
       "concept": "Modular Javascript",

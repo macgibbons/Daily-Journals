@@ -26,10 +26,16 @@ const EntryListComponent = () => {
             // this dispatches the custom event message to the eventHub
             eventHub.dispatchEvent(message)
             // this envokes the deleteNote function and re-renders the notes
-            deleteEntry(id).then( () => render(entries) )
+            deleteEntry(id).then( () => renderEntriesAgain() )
         }
     })
 
+    const renderEntriesAgain = () => {
+  
+        const allTheEntries = useEntries()
+        render(allTheEntries)
+
+    }
     const render = (entries) => {
         // const entries = useEntries()
       
