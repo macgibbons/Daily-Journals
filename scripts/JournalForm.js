@@ -7,6 +7,7 @@ const eventHub = document.querySelector(".container")
 const journalFormComponent = () => {
     const render = () => {
         contentTarget.innerHTML = `
+        
         <form action="">
                 <fieldset>
                     <input type="hidden" id="entry-id"/>
@@ -29,6 +30,19 @@ const journalFormComponent = () => {
                         <option value="sad">Sad</option>
                     </select>
                 </fieldset>
+
+                <fieldset>
+                    <div class="moodFilter">
+                    <div class="filterLabel">Filter By Moods</div>
+                    <input type="radio" id="happy" name="filter" value="Happy">
+                    <label for="happy">Happy</label>
+                    <input type="radio" id="neutral" name="filter" value="Neutral">
+                    <label for="neutral">Neutral</label>
+                    <input type="radio" id="Sad" name="filter" value="Sad">
+                    <label for="Sad">Sad</label>
+                    </div>
+                </fieldset>
+
                 <fieldset class="button">
                     <button id="save__entry" type="submit" form="" value="Submit">save</button>
                 </fieldset>

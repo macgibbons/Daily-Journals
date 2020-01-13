@@ -28,7 +28,6 @@ const EntryListComponent = () => {
                 return entry
             }
         })
-        // content.classList.remove("emptyLog")
         render(matchingEntries)
     })
 
