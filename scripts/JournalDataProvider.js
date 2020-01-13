@@ -9,14 +9,14 @@ export const getEntries = () => {
         .then(response => response.json())
         .then(
             parsedEntries => {
-                console.table(parsedEntries)
+                // console.table(parsedEntries)
                 entries = parsedEntries.slice()
             }
         )
 }
 
 export const saveEntry = entries => {
-    fetch('http://localhost:3000/entries', {
+    return fetch('http://localhost:3000/entries', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

@@ -1,14 +1,14 @@
 import { getEntries, useEntries } from "./JournalDataProvider.js";
 import EntryListComponent from "./JounrnalEntryList.js";
-import entrySaver from "./JournalEntrySave.js";
 import journalFormComponent from "./JournalForm.js";
+import FilterBar from "./filter/filterBar.js";
+import MoodFilter from "./filter/moodFilter.js";
 
-// console.log(useJournalEntries())
 
-getEntries().then( 
-    EntryListComponent
-)
+getEntries()
+    .then(EntryListComponent)
+    .then(MoodFilter)
+    // .then(FilterBar)
 
 journalFormComponent()
-// entrySaver()
 

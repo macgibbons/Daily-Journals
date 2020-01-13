@@ -1,7 +1,3 @@
-import { useEntries, deleteEntry } from "./JournalDataProvider.js";
-
-const eventHub = document.querySelector(".container")
-
 const JournalEntryComponent = (entry) => {
 
         return `
