@@ -1,5 +1,8 @@
+const contentTarget = document.querySelector(".filters")
+
 const MoodFilter = () => {
-    return `
+    contentTarget.innerHTML =
+     `
     <div class="moodFilter">
     <div class="filterLabel">Filter By Moods</div>
     <input type="radio" id="happy" name="filter" value="Happy">

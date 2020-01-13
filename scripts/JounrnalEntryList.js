@@ -2,16 +2,37 @@ import JournalEntryComponent from "./JournalEntry.js"
 import { useEntries, deleteEntry, getEntries } from "./JournalDataProvider.js"
 
 const eventHub = document.querySelector(".container")
-
 const entryLog = document.querySelector("#entryLog")
 
 const EntryListComponent = () => {
+    const entries = useEntries()
 
     eventHub.addEventListener("entryHasBeenEdited", event => {
         renderEntriesAgain()
      })
+
+     eventHub.addEventListener("entryHasBeenSaved", e =>{
+         renderEntriesAgain()
+     })
+     eventHub.addEventListener("deleteEntryClicked", e =>{
+         console.log("delete message read");
+         
+        renderEntriesAgain()
+    })
+
+      eventHub.addEventListener("filterClick", event => {
+        const allEntries = useEntries()
+        const mood = event.detail.mood
+        const matchingEntries = allEntries.filter(entry => {
+            if (entry.mood === mood) {
+                return entry
+            }
+        })
+        // content.classList.remove("emptyLog")
+        render(matchingEntries)
+    })
+
  
-     const entries = useEntries()
      eventHub.addEventListener("click", clickEvent => {
                  if (clickEvent.target.id.startsWith("editEntry--")) {
                     console.log("edit button clicked");
@@ -40,17 +61,17 @@ const EntryListComponent = () => {
                     entryId: id
                 }
             })
-            // this dispatches the custom event message to the eventHub
-            eventHub.dispatchEvent(message)
             // this envokes the deleteNote function and re-renders the notes
-            deleteEntry(id).then( () => renderEntriesAgain() )
+            deleteEntry(id).then(() => {
+                eventHub.dispatchEvent(message)
+            })
         }
     })
 
     const renderEntriesAgain = () => {
   
         const allTheEntries = useEntries()
-        render(allTheEntries)
+        getEntries().then(render(allTheEntries))
 
     }
     const render = (entries) => {

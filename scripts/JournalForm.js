@@ -30,7 +30,7 @@ const journalFormComponent = () => {
                     </select>
                 </fieldset>
                 <fieldset class="button">
-                    <button id="save__entry" type="submit" form="" value="Submit">enter</button>
+                    <button id="save__entry" type="submit" form="" value="Submit">save</button>
                 </fieldset>
                 
             </form>
@@ -56,6 +56,31 @@ const journalFormComponent = () => {
         document.querySelector("#concepts").value = theFoundedEntry.concept
     })
 
+    eventHub.addEventListener("click", event => {
+        if (event.target.name ==="filter") {
+          const mood = event.target.value
+          const message = new CustomEvent("filterClick", {
+            detail: {
+              mood: mood
+            }
+          })
+          eventHub.dispatchEvent(message)
+        }
+      })
+
+    eventHub.addEventListener("click", event => {
+    if (event.target.name ==="filter") {
+        console.log("filter clicked");
+        
+        const mood = event.target.value
+        const message = new CustomEvent("filterClick", {
+        detail: {
+            mood: mood
+        }
+        })
+        eventHub.dispatchEvent(message)
+    }
+    })
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id === "save__entry") {
            // Does the hidden input field have a value?
@@ -75,8 +100,8 @@ const journalFormComponent = () => {
                editEntry(editedEntry).then(() => {
                    eventHub.dispatchEvent(new CustomEvent("entryHasBeenEdited"))
                })
-           } 
-        } else {
+           } else 
+        {
             
             const entryDate= document.querySelector("#journalDate").value
             const entryConcept= document.querySelector("#concepts").value
@@ -91,8 +116,10 @@ const journalFormComponent = () => {
             }
 
         
-            saveEntry(entryToSave)
+            saveEntry(entryToSave).then(() => {
+                eventHub.dispatchEvent(new CustomEvent("entryHasBeenSaved"))
+            })
         }
-    })
+    }})
 }
 export default journalFormComponent
