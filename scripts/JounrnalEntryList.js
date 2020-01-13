@@ -2,7 +2,7 @@ import JournalEntryComponent from "./JournalEntry.js"
 import { useEntries, deleteEntry, getEntries } from "./JournalDataProvider.js"
 
 const eventHub = document.querySelector(".container")
-const entryLog = document.querySelector("#entryLog")
+const entryLog = document.querySelector(".entryContainer")
 
 const EntryListComponent = () => {
     const entries = useEntries()
