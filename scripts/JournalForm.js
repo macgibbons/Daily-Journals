@@ -7,8 +7,8 @@ const eventHub = document.querySelector(".container")
 const journalFormComponent = () => {
     const render = () => {
         contentTarget.innerHTML = `
-
-        <form class="sticky" action="">
+        
+        <form action="">
                 <fieldset>
                     <input type="hidden" id="entry-id"/>
                     <label for="journalDate">Date of Journal</label>
@@ -31,21 +31,17 @@ const journalFormComponent = () => {
                     </select>
                 </fieldset>
 
-                <section class="filter">
+                <fieldset>
                     <div class="moodFilter">
-                        <div class="filterLabel">Filter By Moods</div>
-                        <input type="radio" id="happy" name="filter" value="Happy">
-                        <label for="happy">Happy</label>
-                        <input type="radio" id="neutral" name="filter" value="Neutral">
-                        <label for="neutral">Neutral</label>
-                        <input type="radio" id="Sad" name="filter" value="Sad">
-                        <label for="Sad">Sad</label>
+                    <div class="filterLabel">Filter By Moods</div>
+                    <input type="radio" id="happy" name="filter" value="Happy">
+                    <label for="happy">Happy</label>
+                    <input type="radio" id="neutral" name="filter" value="Neutral">
+                    <label for="neutral">Neutral</label>
+                    <input type="radio" id="Sad" name="filter" value="Sad">
+                    <label for="Sad">Sad</label>
                     </div>
-                    <div class="search">
-                        <div>search entries:</div>
-                        <input type="text" id="searchBox">
-                    </div>
-                </section>
+                </fieldset>
 
                 <fieldset class="button">
                     <button id="save__entry" type="submit" form="" value="Submit">save</button>
@@ -99,22 +95,6 @@ const journalFormComponent = () => {
         eventHub.dispatchEvent(message)
     }
     })
-
-
-  eventHub.addEventListener("keypress", event => {
-    if (event.keyCode === 13) {
-      if (event.target.id === "searchBox") {
-        const searchValue = event.target.value
-        const message = new CustomEvent("searchInitiated", {
-          detail: {
-            search: searchValue
-          }
-        })
-        eventHub.dispatchEvent(message)
-      }
-    }
-  })
-
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id === "save__entry") {
            // Does the hidden input field have a value?

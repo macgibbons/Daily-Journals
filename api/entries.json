@@ -38,16 +38,16 @@
     {
       "date": "",
       "concept": "Modular Javascript",
+      "entry": "We used javascript to automate the creation of objects on the DOM. We built an array of objects and then defined a function to interate over that object. we then created a function to insert those objects as HTML so they display on the webpage",
+      "mood": "Happy",
+      "id": 15
+    },
+    {
+      "date": "",
+      "concept": "Modular Javascript",
       "entry": "We used javascript to automate the creation of objects on the DOM. We built an array of objects and then defined a function to interate over that object. we then created a function to insert those objects as HTML so they display on the webpage.",
       "mood": "Happy",
       "id": 16
-    },
-    {
-      "date": "2020-01-13",
-      "concept": "Sticky scrolling, filtering, and searching",
-      "entry": "Today I worked on my own to better grasp filtering and searching. I cleaned up a lot of my code in this journal app. Fixed the bug where you had to refresh the page after deleting and saving entries. the app state and api state are now in sync. I used flexbox to float the form and entries side by side and then used position sticky to float the form when scrolling. This gives a better ux. ",
-      "mood": "happy",
-      "id": 17
     }
   ]
 }

@@ -7,18 +7,15 @@ body {
 
 .content {
     display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
-    justify-content: center;
-    /* margin-left: 275px; */
+    flex-direction: column;
+    align-items: center;
+    margin-left: 275px;
 
 }
 
 h1 {
     color: #Fff;
     align-self: center;
-    text-align: center;
     color: rgb(51, 36, 255);
     width: fit-content;
     padding: .4em;
@@ -29,39 +26,20 @@ header {
     align-self: center;
     display: flex;
     justify-content: center;
- 
+    /* margin-bot
+    tom: 10px; */
 }
 form {
     color: rgb(51, 36, 255);
     text-transform: lowercase;
-   
-}
-.journalFormContainer{
-    flex-basis: 40%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
-.emptyLog{
-    display: flex;
-    flex-direction: column;
-    color:rgb(51, 36, 255);
-    text-align: center;
-}
-.sticky {
-    position: sticky;
-    top: 50px;
-}
-
-.entryContainer{
-    flex-basis: 50%;
+    align-self: center;
     width: 600px;
-
 }
+
 fieldset {
     display: flex;
     flex-direction: column;
-    /* width: 600px; */
+    width: 600px;
     border: none;
     border: 1px solid rgb(51, 36, 255);
     margin-bottom: 10px;
@@ -124,45 +102,24 @@ button:active {
 article {
     display: flex;
     flex-direction: column;
-    /* width: 600px; */
+    width: 600px;
     border: none;
-    /* padding-top: 25px; */
+    padding-top: 25px;
     align-self: center;
 }
-
 .journalEntry {
         align-self: center;
-        /* width: 595px; */
+        width: 595px;
         border: 1px solid rgb(51, 36, 255);
         padding: 1em;
         margin-bottom: 2em;
-        margin-left: 1em;
         background-color: white;
         color: #36382E;
         margin-right: auto;
-  
+        
         
 }
 
 div {
     padding: 5px;
-}
-
-.filter {
-    display: flex;
-    flex-direction: row !important;
-    justify-content: space-evenly;
-    /* width: 600px; */
-    border: none;
-    border: 1px solid rgb(51, 36, 255);
-    margin-bottom: 10px;
-   
-}
-
-.moodFilter {
-    flex-basis: 40%;
-}
-
-.search {
-    flex-basis: 40%;
 }
