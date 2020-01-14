@@ -34,11 +34,23 @@ header {
 form {
     color: rgb(51, 36, 255);
     text-transform: lowercase;
-    /* align-self: center; */
-    /* width: 600px; */
+   
 }
 .journalFormContainer{
-    flex-basis: 40%
+    flex-basis: 40%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.emptyLog{
+    display: flex;
+    flex-direction: column;
+    color:rgb(51, 36, 255);
+    text-align: center;
+}
+.sticky {
+    position: sticky;
+    top: 50px;
 }
 
 .entryContainer{

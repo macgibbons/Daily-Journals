@@ -20,6 +20,23 @@ const EntryListComponent = () => {
         renderEntriesAgain()
     })
 
+    eventHub.addEventListener("searchInitiated", event => {
+        const searchTerm = event.detail.search
+         const entries = useEntries()
+         const matchingEntries = entries.filter(entry => {
+           if (entry.concept.includes(searchTerm) || entry.entry.includes(searchTerm)) {
+             return entry
+           }
+         })
+         if (matchingEntries.length > 0) {
+          entryLog.classList.remove("emptyLog")
+           render(matchingEntries)
+         } else {
+           entryLog.classList.add("emptyLog")
+           entryLog.innerHTML = "oops! try searching another topic..."
+         }
+      })
+
       eventHub.addEventListener("filterClick", event => {
         const allEntries = useEntries()
         const mood = event.detail.mood

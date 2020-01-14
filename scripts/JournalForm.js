@@ -8,7 +8,7 @@ const journalFormComponent = () => {
     const render = () => {
         contentTarget.innerHTML = `
 
-        <form action="">
+        <form class="sticky" action="">
                 <fieldset>
                     <input type="hidden" id="entry-id"/>
                     <label for="journalDate">Date of Journal</label>
@@ -43,7 +43,7 @@ const journalFormComponent = () => {
                     </div>
                     <div class="search">
                         <div>search entries:</div>
-                        <input type="text" id="searchField">
+                        <input type="text" id="searchBox">
                     </div>
                 </section>
 
@@ -99,6 +99,22 @@ const journalFormComponent = () => {
         eventHub.dispatchEvent(message)
     }
     })
+
+
+  eventHub.addEventListener("keypress", event => {
+    if (event.keyCode === 13) {
+      if (event.target.id === "searchBox") {
+        const searchValue = event.target.value
+        const message = new CustomEvent("searchInitiated", {
+          detail: {
+            search: searchValue
+          }
+        })
+        eventHub.dispatchEvent(message)
+      }
+    }
+  })
+
     eventHub.addEventListener("click", clickEvent => {
         if (clickEvent.target.id === "save__entry") {
            // Does the hidden input field have a value?
